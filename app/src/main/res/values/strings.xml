@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Event Lanka</string>
+    <string name="password">Password</string>
+    <string name="App">Event </string>
+    <string name="App1">Lanka</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="add_fingerprint">Add Fingerprint</string>
+    <string name="add_cart">Add To Cart</string>
+    <string name="delete_cart">Clear Cart</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="profile">My Profile</string>
+    <string name="type">Event Type</string>
+    <string name="user">User Management</string>
+    <string name="admin">Admin Management</string>
+    <string name="event">Event Management</string>
+    <string name="ticket">Ticket Management</string>">
+    <string name="location">Event Location</string>">
+    <string name="notification">Notification</string>">
+    <string name="payment">Payment</string>">
+    <string name="report">Report</string>">
+    <string name="feedback">Feedback</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_password_code">Forgot Password Code</string>
+    <string name="forgot_password_new_password">Forgot Password New Password</string>
+    <string name="log_in">Log In</string>
+    <string name="new_password">New Password</string>
+    <string name="re_enter_password">Re Enter Password</string>
+    <string name="code">Code</string>
+    <string name="email">Email</string>
+    <string name="forgrt_your_password">Forgrt your password ?</string>
+    <string name="enter_your_email_address_to_receive_a_verification_code">Enter your email address to receive a verification code.</string>
+</resources>

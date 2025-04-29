@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Admin.AdminDashbordFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Main ScrollView area -->
+        <ScrollView
+            android:id="@+id/adminHomeScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/adminHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/type"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_slider_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <!-- Image centered by parent's gravity="center" -->
+                        <ImageView
+                            android:id="@+id/profileIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="Profile"
+                            android:padding="2dp"
+                            android:src="@drawable/pp"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textBookHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/robotocondensed_bold"
+                            android:gravity="center"
+                            android:text="@string/profile"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/type"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/profile"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_slider_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/typeIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="Type"
+                            android:padding="2dp"
+                            android:src="@drawable/type"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textViewHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/robotocondensed_bold"
+                            android:gravity="center"
+                            android:text="@string/type"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Barrier for Row 1 -->
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/row1Barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="profile,type" />
+
+                <!-- =========================
+                     ROW 2: userManagement + adminManagement
+                     ========================= -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/userManagement"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/adminManagement"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/row1Barrier">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_slider_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/userIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="User"
+                            android:padding="2dp"
+                            android:src="@drawable/users"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/texPackageHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/robotocondensed_bold"
+                            android:gravity="center"
+                            android:text="@string/user"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/adminManagement"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/userManagement"
+                    app:layout_constraintTop_toBottomOf="@+id/row1Barrier">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_slider_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/adminIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="Admin"
+                            android:padding="2dp"
+                            android:src="@drawable/users"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/texPaymentheader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/robotocondensed_bold"
+                            android:gravity="center"
+                            android:text="@string/admin"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Barrier for Row 2 -->
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/row2Barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="userManagement,adminManagement" />
+
+                <!-- =========================
+                     ROW 3: ticket_management + eventManagemnt
+                     ========================= -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ticket_management"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/eventManagemnt"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/row2Barrier">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_slider_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/ticketIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="Ticket"
+                            android:padding="2dp"
+                            android:src="@drawable/ticket"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/texPaymentHeader1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/robotocondensed_bold"
+                            android:gravity="center"
+                            android:text="@string/ticket"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/eventManagemnt"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ticket_management"
+                    app:layout_constraintTop_toBottomOf="@+id/row2Barrier">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_slider_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/eventIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="Event"
+                            android:padding="2dp"
+                            android:src="@drawable/event"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/texPaymentHeader2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/robotocondensed_bold"
+                            android:gravity="center"
+                            android:text="@string/event"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Barrier for Row 3 -->
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/row3Barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="ticket_management,eventManagemnt" />
+
+                <!-- =========================
+                     ROW 4: locationn + notification
+                     ========================= -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/locationn"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/notification"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/row3Barrier">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_slider_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/locationIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="Location"
+                            android:padding="2dp"
+                            android:src="@drawable/location"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/texPaymentHeader3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/robotocondensed_bold"
+                            android:gravity="center"
+                            android:text="@string/location"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/notification"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/locationn"
+                    app:layout_constraintTop_toBottomOf="@+id/row3Barrier">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_slider_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/notificationIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="Notification"
+                            android:padding="2dp"
+                            android:src="@drawable/notification"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/texPaymentHeader4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/robotocondensed_bold"
+                            android:gravity="center"
+                            android:text="@string/notification"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Barrier for Row 4 -->
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/row4Barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="locationn,notification" />
+
+                <!-- =========================
+                     ROW 5: payment + report
+                     ========================= -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/payment"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/report"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/row4Barrier">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_slider_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/paymentIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="Payment"
+                            android:padding="2dp"
+                            android:src="@drawable/payment"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/texPaymentHeader5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/robotocondensed_bold"
+                            android:gravity="center"
+                            android:text="@string/payment"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/report"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/payment"
+                    app:layout_constraintTop_toBottomOf="@+id/row4Barrier">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_slider_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/reportIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="Report"
+                            android:padding="2dp"
+                            android:src="@drawable/report"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/texPaymentHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/robotocondensed_bold"
+                            android:gravity="center"
+                            android:text="@string/report"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Barrier for Row 5 -->
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/row5Barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="payment,report" />
+
+                <!-- =========================
+                     ROW 6: feedbacks (single card, centered)
+                     ========================= -->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+

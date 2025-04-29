@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:textAlignment="center"
+    android:background="@color/bg_transparent"
+    tools:context=".Admin.AdminProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_transparent">
+
+        <!-- Use android:src to display the image at runtime -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logOutButton"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/btn_logout_bg"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageView12"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView12"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="86dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/circle_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Use android:src or app:srcCompat here -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userImage"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="91dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_png"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+
+        <EditText
+            android:id="@+id/pfname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:fontFamily="@font/robotocondensed"
+            android:hint="First name"
+            android:inputType="text"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView12" />
+
+        <EditText
+            android:id="@+id/pemail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:ems="10"
+            android:fontFamily="@font/robotocondensed"
+            android:hint="Email"
+            android:inputType="text"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plname" />
+
+        <EditText
+            android:id="@+id/plname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:fontFamily="@font/robotocondensed"
+            android:hint="Last name"
+            android:inputType="text"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pfname" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_button"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/btn_background"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pemail" />
+
+        <!-- Use android:src to display the image -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

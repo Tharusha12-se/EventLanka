@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_transparent_90">#E6FFFFFF</color> <!-- 90% Opacity -->
+    <color name="white_transparent_80">#CCFFFFFF</color> <!-- 80% Opacity -->
+    <color name="white_transparent_70">#B3FFFFFF</color> <!-- 70% Opacity -->
+    <color name="white_transparent_50">#80FFFFFF</color> <!-- 50% Opacity -->
+    <color name="white_transparent_30">#4DFFFFFF</color> <!-- 30% Opacity -->
+    <color name="white_transparent_10">#1AFFFFFF</color> <!-- 10% Opacity -->
+
+    <color name="main_background">#19191b</color>
+    <color name="pink">#e45eb0</color>
+    <color name="green">#34e3c4</color>
+    <color name="success">#10C707</color>
+    <color name="error">#D30B0B</color>
+    <color name="gray">#797C79</color>
+    <color name="lightgray">#C5C1C1</color>
+
+
+
+    <color name="matiria_fill_card">#292A2F</color>
+
+    <color name="bg_transparent">#00000000</color>
+
+</resources>

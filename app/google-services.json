@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "284407236206",
+    "project_id": "eventlanka-fc63e",
+    "storage_bucket": "eventlanka-fc63e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284407236206:android:7de6d941a905a8c2a7c87f",
+        "android_client_info": {
+          "package_name": "com.example.EventLanka"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdO9qo3_-eDsX2HUz7Vk4OO4aWtFpszR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

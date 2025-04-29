@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CircleImageView">
+        <item name="cornerFamily">rounded</item>
+        <!-- Set cornerSize to 50% to make it a circle -->
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+    <style name="MySpinnerStyle" parent="ThemeOverlay.AppCompat.Light">
+        <!-- Set the text color to white -->
+        <item name="android:textColor">@android:color/white</item>
+
+        <!-- Optionally set the dropdown text color -->
+        <item name="android:spinnerDropDownItemStyle">@style/MySpinnerDropdownStyle</item>
+    </style>
+
+    <style name="MySpinnerDropdownStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+</resources>
