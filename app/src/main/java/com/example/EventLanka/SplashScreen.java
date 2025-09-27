@@ -29,7 +29,7 @@ public class SplashScreen extends AppCompatActivity {
         Animation splingAnimation = AnimationUtils.loadAnimation(this, R.anim.spling_animation);
         Animation flingAnimation = AnimationUtils.loadAnimation(this, R.anim.fling_animation);
 
-        // Start animations
+        // Start animationss
         logo.startAnimation(splingAnimation);
         textView.startAnimation(flingAnimation);
 
