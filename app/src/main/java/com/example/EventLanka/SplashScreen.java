@@ -40,6 +40,8 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(new Intent(SplashScreen.this, MainActivity.class));
                 finish();
             }
-        }, 2000); // Adjust the delay as needed
+        }, 2000);
+        // Adjust the delay as needed
+        System.out.println("hello");
     }
 }
